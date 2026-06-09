@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: product-frontend
+  template:
+    metadata:
+      labels:
+        app: product-frontend
+    spec:
+      containers:
+        - name: product-frontend
+          # Replace <ACR_NAME> with your registry, e.g. fullstackacr.azurecr.io
+          image: <ACR_NAME>.azurecr.io/product-frontend:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-frontend
+spec:
+  type: LoadBalancer
+  selector:
+    app: product-frontend
+  ports:
+    - port: 80
+      targetPort: 80
