@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: product-frontend
-          # Replace <ACR_NAME> with your registry, e.g. fullstackacr.azurecr.io
-          image: <ACR_NAME>.azurecr.io/product-frontend:latest
+          # Replace anishfullstackacr with your registry, e.g. fullstackacr.azurecr.io
+          image: anishfullstackacr.azurecr.io/product-frontend:latest
           ports:
             - containerPort: 80
 ---
