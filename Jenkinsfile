@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        PATH = "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:${PATH}"
         ACR     = 'anishfullstackacr'          // your ACR name (no .azurecr.io)
         RG      = 'fullstack-rg'
         AKS     = 'fullstack-aks'
