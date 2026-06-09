@@ -87,6 +87,14 @@ az aks get-credentials -n $AKS -g $RG
 kubectl get nodes
 ```
 
+
+<!-- az aks create -n $AKS -g $RG \
+  --node-count 1 \
+  --node-vm-size Standard_B2s_v2 \
+  --attach-acr $ACR \
+  --generate-ssh-keys -->
+
+
 ### Step 6 — Deploy the BACKEND first (creates MySQL + API)
 From the product-api repo folder:
 ```bash

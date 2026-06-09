@@ -9,8 +9,8 @@ import { Product, ProductService } from './product.service';
   imports: [CommonModule, FormsModule],
   template: `
     <main class="wrap">
-      <h1>Product Manager</h1>
-      <p class="sub">Angular 21 + .NET 8 + MySQL on Kubernetes</p>
+      <h1>Product Manager v1.0.1 </h1>
+     
 
       <form class="card" (ngSubmit)="save()">
         <h2>{{ editing() ? 'Edit' : 'Add' }} product</h2>
