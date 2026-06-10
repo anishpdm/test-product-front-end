@@ -9,7 +9,7 @@ import { Product, ProductService } from './product.service';
   imports: [CommonModule, FormsModule],
   template: `
     <main class="wrap">
-      <h1>Product Manager v1.0.1 </h1>
+      <h1>Product Manager v2.0.1 </h1>
      
 
       <form class="card" (ngSubmit)="save()">
